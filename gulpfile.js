@@ -12,6 +12,8 @@ var gulp = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
+    GulpSSH = require('gulp-ssh'),
+    fs = require('fs'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
 
@@ -193,3 +195,22 @@ gulp.task('default', ['build', 'webserver', 'watch']);
 gulp.task('sprite', [
     'sprite:build'
 ]);
+
+
+var sshConfig = {
+  host: '185.41.162.114',
+  port: 22,
+  username: 'smhost',
+  password: 'aryboq4qxg' 
+}
+
+var gulpSSH = new GulpSSH({
+  ignoreErrors: false,
+  sshConfig: sshConfig
+})
+
+gulp.task('dest', function () {
+  return gulp
+    .src('build/**/*')
+    .pipe(gulpSSH.dest('/home/smhost/kspy.smhost.ru/www/'))
+});

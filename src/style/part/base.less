@@ -1,13 +1,16 @@
 //переменные
-@font: 'PT Sans', sans-serif;
-@font-title: 'PT Serif', serif;
+@font: 'Open Sans', sans-serif;
+@font-title: 'Open Sans', serif;
 @font-alt: 'Trebuchet MS', serif;
 
 @color_white: #fff;
-@color_text: #4d4d4d;
-@color_link: #003777;
-@color_blue: #003777;
-@color_grey: #eaeaea;
+@color_text: #717171;
+@color_link: #1e6ba3;
+@color_blue: #154a70;
+@color_blue-d: #2a3f4f;
+@color_grey: #9b9ea3;
+@color_red: #f03c38;
+
 
 * {
     box-sizing: border-box;
@@ -31,7 +34,7 @@ body {
     font-family: @font;
     margin: 0;
     padding: 0;
-    background: @color_white;
+    background: #f4f4f4;
     color: @color_text;
 }
 
@@ -45,7 +48,7 @@ img {
 }
 
 p {
-    font-size: 18px;
+    font-size: 14px;
     margin: 0 0 20px 0;
     line-height: 26px;
 }
@@ -54,6 +57,11 @@ a {
     color: @color_link;
     outline: none;
     transition: all 0.2s;
+
+    &:hover {
+        text-decoration: none;
+        color: @color_red;
+    }
 }
 
 button {
@@ -72,26 +80,53 @@ a:hover {
 }
 
 h1 {
-    .head(25px, 30px, normal, @color_text);
-    font-weight: 400;
+    .head(28px, 30px, normal, #000);
+    font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
 }
 
 h2 {
-    .head(22px, 25px, normal, @color_text);
+    .head(20px, 30px, normal, #000);
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 h3 {
-    .head(18px, 20px, normal, @color_text);
+    .head(16px, 30px, normal, #000);
+    font-weight: 700;
 }
 
 h4 {
-    .head(16px, 15px, normal, @color_text);
+    .head(14px, 30px, normal, #000);
+    font-weight: 700;
 }
 
 h5 {
-    .head(13px, 15px, normal, @color_text);
+    .head(13px, 15px, normal, #000);
     font-weight: 700;
+}
+
+mark {
+    background: none;
+    font-size: 18px;
+    margin-bottom: 30px;
+    display: block;
+    color: @color_text;
+    text-align: center;
+}
+
+hr {
+    border-width: 0;
+    margin: 30px 0;
+    &:after {
+        content: "";
+        display: block;
+        width: 80px;
+        margin: 0 auto;
+        height: 3px;
+        background: @color_red;
+    }
 }
 
 
