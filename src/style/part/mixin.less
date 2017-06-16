@@ -2,11 +2,23 @@
 
 
 //цвет плейслолдера input
-.placeholder-color(@ph-color) {
-    &::-webkit-input-placeholder {color: @ph-color}
-    &::-moz-placeholder          {color: @ph-color}
-    &:-moz-placeholder           {color: @ph-color}
-    &:-ms-input-placeholder      {color: @ph-color}
+.placeholder-color(@ph-color,@ph-opacity : 1) {
+    &::-webkit-input-placeholder {
+        color: @ph-color;
+        opacity: @ph-opacity;
+    }
+    &::-moz-placeholder          {
+        color: @ph-color;
+        opacity: @ph-opacity;
+    }
+    &:-moz-placeholder           {
+        color: @ph-color;
+        opacity: @ph-opacity;
+    }
+    &:-ms-input-placeholder      {
+        color: @ph-color;
+        opacity: @ph-opacity;
+    }
 }
 
 .transition {
