@@ -84,6 +84,10 @@ $(document).ready(function() {
         $(this).addClass('selected');
     });
 
-
+    $('.news-filtr-one').not('.news-filtr-one--all').each(function() {
+        if ( !$(this).hasClass('active') && $(this).index() > 2 ) {
+            $(this).hide();
+        }
+    });
 
 });
