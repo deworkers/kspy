@@ -768,6 +768,15 @@ body {
         font-size: 13px;
         font-weight: 300;
         color: #7f94a4;
+        display: inline-block;
+        line-height: 16px;
+        text-decoration: none;
+        border-bottom: 1px solid #7f94a4;
+
+        &:hover {
+            color: @color_red;
+            border-color: @color_red;
+        }
     }
 }
 
@@ -1133,12 +1142,13 @@ body {
 }
 
 .doc-one__download {
+    font-size: 14px;
     float: right;
     margin-left: 30px;
     text-decoration: none;
     display: inline-block;
     border-bottom: 1px solid #154a70;
-    line-height: 18px;
+    line-height: 16px;
 
     &:hover {
         border-color: @color_red;
@@ -1146,12 +1156,13 @@ body {
 }
 
 .doc-one__print {
+    font-size: 14px;
     float: right;
     margin-left: 30px;
     text-decoration: none;
     display: inline-block;
     border-bottom: 1px solid #154a70;
-    line-height: 18px;
+    line-height: 16px;
 
     &:hover {
         border-color: @color_red;
@@ -1305,5 +1316,56 @@ body {
 
     a {
         font-size: 14px;
+        line-height: 16px;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid #7f94a4;
+
+        &:hover {
+            color: @color_red;
+            border-color: @color_red;
+        }
+    }
+}
+
+.filtr {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.filtr-sort {
+    font-size: 14px;
+    a {
+        font-size: 14px;
+        line-height: 16px;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid #7f94a4;
+        margin-left: 10px;
+
+        &:hover {
+            color: @color_red;
+            border-color: @color_red;
+        }
+
+        &.active {
+            color: @color_red;
+            border-bottom: none;
+            font-weight: 700;
+        }
+    }
+}
+
+
+
+.pagination {
+    padding-top: 40px;
+    border-top: 1px solid #cdcdcd;
+
+    a, span {
+        text-decoration: none;
+        font-size: 14px;
+        margin-right: 10px;
+        display: inline-block;
     }
 }
