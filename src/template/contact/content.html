@@ -1,0 +1,146 @@
+<div class="wrap">
+    <div class="content content--side">
+            <div class="breadcrumbs">
+                <a href="#">Главная</a>
+            </div>
+            <h1>контакты</h1>
+            
+            <div class="contact">
+                <div class="contact-menu">
+                    <a href="#main-ofice" class="active j-scroll-to">Главный офис</a>
+                    <a href="#filial" class="j-scroll-to">Филиалы</a>
+                    <a href="#order" class="j-scroll-to">Обратная связь</a>
+                </div>
+                    <div class="contact-list">
+                        <div class="contact-one">
+                            <div class="contact__top">Адрес главного <br>офиса</div>
+                            <div class="contact__bottom">111024, Россия, г.Москва,<br>ул. Подъемная, д. 12а</div>
+                        </div>
+                        <div class="contact-one">
+                            <div class="contact__top">Секретариат генерального директора</div>
+                            <div class="contact__bottom">Т: +7 (495) 673-67-06</div>
+                        </div>
+                        <div class="contact-one">
+                            <div class="contact__top">Секретариат генерального конструктора</div>
+                            <div class="contact__bottom">Т: +7 (495) 673-67-07</div>
+                        </div>
+                        <div class="contact-one">
+                            <div class="contact__top">Отдел документационного обеспечения</div>
+                            <div class="contact__bottom">Ф: +7 (495) 673-67-11<br>@: <a href="#">mail@corpspu.ru</a></div>
+                        </div>
+                    </div>
+
+            </div>
+            
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map('map', {
+                    center: [56.83171856787374,60.6625664999999],
+                    zoom: 16,
+                    controls: []
+                }, {
+                }),
+             
+
+                myPlacemark = new ymaps.Placemark([
+                    56.83171856787374,60.6625664999999
+                ], {
+                    iconCaption: 'г. Екатеринбург, улица Победы, 42, эт. 1'
+                }, {
+                    preset: 'islands#blueCircleDotIconWithCaption',
+                    iconCaptionMaxWidth: '240'
+                });
+
+            myMap.geoObjects.add(myPlacemark);
+        });
+    </script>
+    <div class="map" id="map"></div>
+
+
+    <div class="content content--side" id="filial">
+        <div class="filials">
+            <div class="filial">
+                <div class="filial-top">
+                    <div class="filial__number">01</div>
+                    <div class="filial__title">Филиал АО «Корпорация «Стратегические пункты управления» «КБ Тяж Маш»</div>
+                </div>
+                <div class="filial-hidden">
+                    <table class="filial-one">
+                        <tr>
+                            <td><b>Санкт-Петербург</b></td>
+                            <td>195030, Россия,<br>Санкт-Петербург,<br>ул. Химиков, д. 24</td>
+                            <td>Т: +7 (812) 748-91-10</td>
+                            <td>Ф: +7 (812) 526-32-09</td>
+                            <td>@: <a href="#">inform@fgup-ckbtm.spb.ru</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="filial">
+                <div class="filial-top">
+                    <div class="filial__number">02</div>
+                    <div class="filial__title">Дочернее предприятие АО «Центральное конструкторское бюро транспортного машиностроения»</div>
+                </div>
+                <div class="filial-hidden">
+                    <table class="filial-one">
+                        <tr>
+                            <td><b>Санкт-Петербург</b></td>
+                            <td>195030, Россия,<br>Санкт-Петербург,<br>ул. Химиков, д. 24</td>
+                            <td>Т: +7 (812) 748-91-10</td>
+                            <td>Ф: +7 (812) 526-32-09</td>
+                            <td>@: <a href="#">inform@fgup-ckbtm.spb.ru</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="filial">
+                <div class="filial-top">
+                    <div class="filial__number">03</div>
+                    <div class="filial__title">Филиал АО «Корпорация «Стратегические пункты управления» «КБ Тяж Маш»</div>
+                </div>
+                <div class="filial-hidden">
+                    <table class="filial-one">
+                        <tr>
+                            <td><b>Санкт-Петербург</b></td>
+                            <td>195030, Россия,<br>Санкт-Петербург,<br>ул. Химиков, д. 24</td>
+                            <td>Т: +7 (812) 748-91-10</td>
+                            <td>Ф: +7 (812) 526-32-09</td>
+                            <td>@: <a href="#">inform@fgup-ckbtm.spb.ru</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="order" id="order">
+            <div class="form-title">Форма обратной связи</div>
+            <div class="order-form">
+                <form id="order-form" action="" method="post" >
+                    <div class="form-line">
+                        <input type="text" name="name" placeholder="Ваше имя*">
+                    </div>
+                    <div class="form-line">
+                        <div class="form-col">
+                            <input type="text" name="email" placeholder="Ваш е-mail*">
+                        </div>
+                        <div class="form-col">
+                            <input type="text" name="phone" placeholder="Ваш телефон">
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <input type="text" name="them" placeholder="Тема обращения*">
+                    </div>
+                    <div class="form-line">
+                        <textarea name="mesage" placeholder="Сообщение*"></textarea>
+                    </div>
+                    <div class="form-line">
+                        <button class="form-send">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

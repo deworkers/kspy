@@ -90,4 +90,14 @@ $(document).ready(function() {
         }
     });
 
+    $('.rukovod__more').on('click', function(event) {
+        $(this).next('.rukovod__hidden').slideToggle();
+        $(this).slideUp();
+        event.preventDefault();
+    });
+
+    $('.filial-top').on('click', function() {
+        $(this).toggleClass('active').next().slideToggle();
+    });
+
 });

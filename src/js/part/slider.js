@@ -38,7 +38,7 @@ $(document).ready(function() {
         spaceBetween: 5
     });
 
-    $('.news-slider .swiper-wrapper').magnificPopup({
+    $('.news-slider .swiper-wrapper, .preview-list').magnificPopup({
         delegate: 'a',
         type: 'image',
         closeOnContentClick: false,
@@ -61,6 +61,15 @@ $(document).ready(function() {
             }
         }
         
+    });
+
+    $('.video-one__show').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
     });
 
 });

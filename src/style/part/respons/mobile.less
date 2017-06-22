@@ -456,6 +456,144 @@
         display: none;
     }
 
+    .product-category-one {
+        width: 100%;
+        height: auto;
+        text-decoration: none;
+        &:hover {
+            .product-category__title {
+                font-size: 16px;
+                position: relative;
+                width: 100%;
+                top: auto;
+                padding: 10px 0;
+            }
+            .product-category-img {
+                width: 100%;
+                height: 190px;
+                position: relative;
+            }
+        }
+    }
+
+    .product-category-img {
+        width: 100%;
+        height: 190px;
+        position: relative;
+    }
+
+    .product-category__title {
+        font-size: 16px;
+        position: relative;
+        width: 100%;
+        top: auto;
+        padding: 10px 0;
+        br {
+            display: none;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: ~'calc(100% - 10px)';
+            left: 50%;
+            width: 1px;
+            height: 50px;
+            background: @color_red;
+            .transition();
+        }
+    }
+
+    .product-category__more {
+        display: none;
+    }
+
+    .head-bg--category {
+        height: 960px;
+    }
+
+    .filial__title {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 10px 30px 10px 20px
+    }
+
+    .filial__number {
+        font-size: 15px;
+        width: 45px;
+    }
+
+    .filial-top {
+        &:after {
+            top: 50%;
+            margin-top: -5px;
+            right: 10px;
+        }
+    }
+
+    .filial-hidden {
+        padding: 10px 0;
+    }
+
+    .filial-one {
+        td {
+            display: block;
+            padding: 5px 0;
+            font-size: 12px;
+        }
+    }
+
+    .form-line {
+        margin-bottom: 10px;
+
+        input[type="text"] {
+            font-size: 13px;
+            height: 45px;
+        }
+        textarea {
+            font-size: 13px;
+            height: 95px;
+        }
+    }
+
+    .form-col {
+        width: 100%;
+        margin: 0;
+
+        &:nth-child(2n+1) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .form-send {
+        width: 140px;
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .contact-menu {
+        display: none;
+    }
+
+    .contact-one {
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .contact__top {
+        padding-bottom: 10px;
+        br {
+            display: none;
+        }
+    }
+
+    .contact__bottom {
+        
+    }
+
+
+
 }
 
 @media screen and (max-width: 480px) { // телефон
